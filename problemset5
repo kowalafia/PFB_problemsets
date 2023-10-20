@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+
+myfavorite = {'book': 'motg', 'song':'som', 'tree': 'cedar'}
+
+print(myfavorite)
+print(myfavorite['book'])
+
+favbook = 'book'
+print(myfavorite[favbook])
+
+print(myfavorite['tree'])
+
+myfavorite['organism'] = 'koala'
+
+print(myfavorite)
+
+fav_thing = 'organism'
+print(myfavorite[fav_thing])
+
+for myfav in myfavorite:
+	print(myfav)
+
+for myfav in myfavorite:
+	seq = myfavorite[myfav]
+	print(myfav, seq[0:5])
+
+myfavorite['organism'] = 'emu'
+
+print(myfavorite)
+
+fav_thing = 'organism'
+print(myfavorite[fav_thing])
+
+myfavorite['organism'] = 'koala'
+print(myfavorite)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
