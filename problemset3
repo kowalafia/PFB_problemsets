@@ -64,3 +64,80 @@ print(f'EcoRI startPos: {start} endPos: {stop}')
 
 
 
+
+taxa = 'sapiens, erectus, neanderthalensis'
+print(taxa)
+print(taxa[1])
+print(type(taxa))
+taxasplit = taxa.split(', ')
+print(taxasplit)
+
+
+species = taxasplit
+print(species)
+print(species[1])
+print(type(species))
+species.sort(key=len)
+print(species)
+
+count = 1
+while count < 101:
+	print("count:" , count)
+	count+=1
+print("Done")
+
+total=1
+count = 1
+while count < 1001:
+	print("total:" , total)
+	count+=1
+	total*=count
+print("Done")
+
+numbers = [101,2,15,22,95,33,2,27,72,15,52]
+for number in numbers:
+	if number%2==0:
+		message = "is even"
+		print(number, message)
+	elif number%2>0:
+		message = "is not even"
+
+sorted_numbers = sorted(numbers)		
+for number in sorted_numbers:
+	if number%2==0:
+		message = "is even"
+		print(number, message)
+#	elif number%2>0:
+
+sum_even = 0
+sum_odd = 0
+sorted_numbers = sorted(numbers)
+for number in sorted_numbers:
+	if number%2==0:
+		message = "is even"
+		sum_even+=number
+		print(number,sum_even, message)
+	elif number%2>0:
+		message = "is odd"
+		sum_odd+=number
+		print(number,sum_odd,  message)
+
+for num in range(99):
+	print(num)
+
+count = 1
+while count <= 100:
+	print(count)
+	count+=1
+
+for num in range(100):
+	print(num + 1)
+
+
+
+		 
+
+
+
+
+
