@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+
+import re
+
+#TESTING 're' (regullar expression) function
+
+dna = 'AGGCCTT'
+if re.search(r"GCC",dna):
+	print('found site!')
+
+dna = 'AGGCCTT'
+found = re.search(r"GCC",dna)
+print(found)
+
+#TEST for Question 1
+test = "It is nobody"
+exam = test.replace("nobody", "somebody")
+print(exam)
+
+#QUESTION 1; didn't print out every position
+
+letter = open("Python_07_nobody.txt")
+contents = letter.read()
+print(contents)
+found = re.findall(r"Nobody",contents)
+print(found)
+
+occur = len(found)
+print(occur)
+letter.close()
+
+#QUESTION 2;initial command line
+
+substi = contents.replace("Nobody", "Somebody")
+print(substi)
+
+#QUESTION 2;full command line
+
+with open("Python_07_nobody.txt","r") as no_read, open("Python_07_somebody.txt","w") as some_write:
+	for line in no_read:
+		line = line.rstrip()
+		substi = contents.replace("Nobody", "Somebody")
+		some_write.write(substi)
+print("Wrote 'Python_07_somebody.txt'")
+
+#QUESTION 3;initial command line
+
+#pyfast = open("Python_07.fasta")
+#contents = pyfast.read()
+#print(contents)
+#found = re.findall(r">",contents)
+#print(found)
+
+#Question 3
+with open("Python_07.fasta", "r") as pyfast:
+	for line in pyfast:
+		line = line.rstrip()
+		found = re.findall(r">",line)
+		if len(found) >0:
+			print(found)
+			print(line)
+
+#Question 4 (got help from Dr Simon; the collest answer to the questions so far; very interesting).	
+with open("Python_07.fasta", "r") as pyfast:
+		for line in pyfast:
+			line = line.rstrip()
+			found = re.findall(r">",line)
+			if len(found) >0:
+				find = re.search(r"^>(\S+)\s(.+)", line)
+				if find:
+					print(find.group(1))
+					print(find.group(2))
+					print(f'id:{find.group(1)} desc:{find.group(2)}')
+      		
+	
+
+#
+		
+
+
+
